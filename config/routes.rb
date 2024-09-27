@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'top#index'
+
+  authenticate :user do
+    resources :passkeys, only: [:index, :create, :destroy]  # 追加
+  end
 end
