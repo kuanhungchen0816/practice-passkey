@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   root 'top#index'
 
   authenticate :user do
-    resources :passkeys, only: [:index, :create, :destroy]  # 追加
+    resources :passkeys, only: [:index, :create, :destroy]  do
+      collection do
+        resources :creation_options, only: [:create], module: :passkeys  # 追加
+      end
+    end
   end
 end
