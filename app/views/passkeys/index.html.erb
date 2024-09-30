@@ -2,6 +2,9 @@
 <%= link_to "→go back", root_path %>
 <p>Find me in app/views/passkeys/index.html.erb</p>
 
+<%= render 'new_form' %>
+
+
 <% if @passkeys.present? %>
   <table>
     <thead>
