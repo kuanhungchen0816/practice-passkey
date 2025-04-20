@@ -19,6 +19,8 @@ Rails.application.routes.draw do
         resources :creation_options, only: [ :create ], module: :passkeys  # 追加
       end
     end
+    resources :quotes
+
   end
 
   scope :passkeys do

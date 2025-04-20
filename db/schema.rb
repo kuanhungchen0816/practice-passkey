@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_27_082131) do
+ActiveRecord::Schema[7.2].define(version: 2025_04_20_134715) do
   create_table "passkeys", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "webauthn_user_id", null: false
     t.string "label", null: false
@@ -22,6 +22,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_27_082131) do
     t.datetime "updated_at", null: false
     t.index ["webauthn_user_id", "external_id"], name: "index_passkeys_on_webauthn_user_id_and_external_id", unique: true
     t.index ["webauthn_user_id"], name: "index_passkeys_on_webauthn_user_id"
+  end
+
+  create_table "quotes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
