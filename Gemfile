@@ -45,6 +45,11 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver' # ブラウザ操作用（ヘッドレスChromeなど）
+  gem "webdrivers", "= 5.3.0"         # 自動でChromeDriverを管理
 end
 
 group :development do
