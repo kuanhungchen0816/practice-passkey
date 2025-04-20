@@ -59,3 +59,5 @@ end
 
 
 gem "webauthn", "~> 3.1"
+gem "simple_form", "~> 5.1.0"
+
