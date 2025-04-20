@@ -10,7 +10,7 @@ class CreatePasskeys < ActiveRecord::Migration[7.2]
 
       t.timestamps
 
-      t.index [:webauthn_user_id, :external_id], unique: true
+      t.index [ :webauthn_user_id, :external_id ], unique: true
     end
   end
 end
