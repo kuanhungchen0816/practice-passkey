@@ -53,4 +53,4 @@ group :development do
 end
 
 
-gem "webauthn", "~> 3.1"
+gem "webauthn", "~> 3.4"
